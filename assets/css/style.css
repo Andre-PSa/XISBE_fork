@@ -1,0 +1,336 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css?family=Jaapokki+Subtract&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaapokki Subtract', sans-serif;
+    background-image: url('../images/background.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    overflow-x: hidden;
+}
+
+body.login-page, html.login-page {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.signup-page, html.signup-page {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.success-page, html.success-page {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout container */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header styles */
+header {
+    width: 100%;
+    position: relative;
+    background-image: url('assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    margin: 0; /* Ensure no spacing around header */
+}
+
+#header-container,
+#footer-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-buttons .cta-button {
+    background-color: #FF9114; /* CTA button background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-buttons .cta-button:hover {
+    background-color: #FFC82C; /* CTA button hover */
+}
+
+.department {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.swiper {
+    width: 100%;
+    height: 300px; /* Ajuste conforme necessário */
+}
+
+.swiper-slide img {
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.mySwiper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;  /* Evitar conteúdo fora da tela */
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;  /* Alinha os slides no centro */
+    align-items: center;
+    width: 100%;  /* Tamanho dinâmico baseado no container */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    z-index: 10;  /* Para garantir que os botões de navegação fiquem visíveis */
+}
+
+
+
+/* Container do formulário */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limita a largura para telas grandes */
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do formulário de login */
+.signupForm {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 36px;
+    color: #055B61;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #039A95;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 30px;
+}
+
+/* Campos de input */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #055B61;
+}
+
+/* Botão */
+button {
+    background-color: #055B61;
+    color: white;
+    padding: 12px;
+/*     width: 100%; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+/*     font-size: 16px */
+}
+
+button:hover {
+    background-color: #039A95;
+}
+
+/* Links */
+p {
+    text-align: center;
+}
+
+p a {
+    color: #055B61;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .signupForm {
+        width: 90%; /* Ajuste para telas pequenas */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Estilo para menus suspensos */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: #055B61;
+}
+
+/* Estilo para as seções */
+section {
+    margin-bottom: 20px;
+}
+
+.signup-section, .attendance-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Estilo para listas */
+.attendance-list {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #555;
+}
+
+/* Títulos secundários */
+h2 {
+    font-size: 24px;
+    color: #039A95;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .signupForm {
+        width: 95%; /* Ocupa quase toda a tela */
+        padding: 15px; /* Reduz preenchimento */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    input[type="email"], input[type="password"] {
+        font-size: 14px; /* Ajusta fonte para telas menores */
+    }
+
+    button {
+        width: 100%; /* Garante que o botão se expanda na tela */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Empilha os links do menu em telas pequenas */
+        gap: 10px;
+        align-items: center;
+    }
+}
+

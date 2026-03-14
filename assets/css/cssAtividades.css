@@ -1,0 +1,100 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaapokki Subtract', sans-serif;
+    background-image: url('../images/background.png'); /* Fundo com imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Para centralizar o conteúdo */
+    align-items: center; /* Para centralizar o conteúdo verticalmente */
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Container da atividade */
+.atividade {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre quando necessário */
+    margin-bottom: 30px;
+}
+
+.atividade-conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.atividade:nth-child(even) .descricao {
+    order: 1; /* Para alternar a ordem em atividades pares (imagem à direita) */
+}
+
+.atividade:nth-child(odd) .descricao {
+    order: 2; /* Para manter a ordem padrão nas atividades ímpares (imagem à esquerda) */
+}
+
+.atividade-img {
+    width: 45%; /* Imagem ocupa 45% da largura */
+    max-width: 500px;
+    height: auto;
+    margin: 0 20px;
+}
+
+.descricao {
+    width: 50%; /* O texto ocupa 50% da largura */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.titulo-roxo {
+    color: #3f165b; /* Cor roxa */
+}
+
+.titulo-atividade {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.texto-roxo p {
+    font-size: 16px;
+    color: #3f165b;
+}
+
+.data-local, .local {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3f165b;
+    color: white;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .atividade-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atividade-img {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .descricao {
+        width: 80%;
+    }
+}
