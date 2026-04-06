@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Jaapokki Subtract";
+  src: url("assets/fonts/jaapokki-subtract.woff2") format("woff2"),
+       url("assets/fonts/jaapokki-subtract.woff") format("woff"),
+       url("assets/fonts/jaapokki-subtract.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   height: 100%;
   margin: 0;
