@@ -262,7 +262,7 @@
         };
 
         function openActivityPage(activityName) {
-            const targetUrl = `activitiesAtualizado.html?activity=${encodeURIComponent(activityName)}`;
+            const targetUrl = `activities.html?activity=${encodeURIComponent(activityName)}`;
             window.location.href = targetUrl;
         }
 
@@ -384,7 +384,7 @@
         }
         
         function loadHeader() {
-            fetch("headerAtualizado.html")
+            fetch("header.html")
                 .then((response) => response.text())
                 .then((data) => {
                 const container = document.getElementById("header-placeholder");
