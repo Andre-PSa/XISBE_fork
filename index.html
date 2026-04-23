@@ -34,7 +34,7 @@
     }
     
     .join-us {
-      width: 500px;
+      width: 100%;
       font-size: 115px;
       position: absolute;
       font-weight: bolder;
@@ -117,7 +117,7 @@
       top: 74px;
     }
     .join-us {
-      width: 500px;
+      width: 100%;
       font-size: 115px;
       position: absolute;
       font-weight: bolder;
@@ -299,6 +299,63 @@
       top: 0;
       z-index: 1000;
     }
+
+    .team-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .team-carousel {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 8px 0 14px;
+      box-sizing: border-box;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .group-photo {
+      flex: 0 0 220px;
+      max-width: 220px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .group-photo img {
+      width: 100%;
+      height: 200px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .group-photo span {
+      display: block;
+      padding: 10px 10px 14px;
+      font-family: 'Bebas Neue', Copperplate, fantasy;
+      font-size: 20px;
+      line-height: 1.1;
+      color: #055b61;
+      text-align: center;
+    }
+
     
   
  
@@ -473,7 +530,7 @@
     <div class="countdown-e-banner">
       <div class="sec-countdown">
         <div class="texto-countdown">
-          <p class="join-us" data-i18n data-en="Join Us In" data-pt="Junta-te a nós em" style="color: #055b61">Join Us In:</p>
+          <p class="join-us" data-i18n data-en="Join Us In" data-pt="Participa em" style="color: #055b61">Join Us In:</p>
         </div>
         <section class="countdown-section" id="countdown-to-event">
           <div class="countdown">
@@ -629,6 +686,54 @@
       <a href="meettheteam.html">
         <p data-i18n data-en="Meet the Team" data-pt="Equipa">MEET THE TEAM</p>
       </a>
+     </div>
+     <div class="team-carousel-wrapper">
+      
+      <div class="team-carousel" >
+        <div class="group-photo">
+          <img src="assets/images/coo_group.jpeg" alt="coordination group">
+          <span data-i18n data-en="General Coordination" data-pt="Coordenação Geral" >
+            General Coordination
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/com_group.jpeg" alt="communication group">
+          <span data-i18n data-en="Communication Department" data-pt="Departamento de Comunicação" >
+            Communication Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/re_group.jpeg" alt="relations group">
+          <span data-i18n data-en="External Relations Department" data-pt="Departamento de Relações Externas" >
+            External Relations Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/log_group.jpeg" alt="logistics group">
+          <span data-i18n data-en="Logistics Department" data-pt="Departamento de Logística" >
+            Logistics Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/inf_group.jpeg" alt="informatics group">
+          <span data-i18n data-en="Informatics Department" data-pt="Departamento de Informática" >
+            Informatics Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/des_group.jpeg" alt="design group">
+          <span data-i18n data-en="Design Department" data-pt="Departamento de Design" >
+            Design Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/cie_group.jpeg" alt="science group">
+          <span data-i18n data-en="Science Department" data-pt="Departamento Ciêntifico" >
+            Science Department
+          </span>
+        </div>
+      </div>
+      
     </div>
     <div id="footer-container"></div>
 
