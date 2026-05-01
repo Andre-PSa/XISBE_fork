@@ -355,10 +355,85 @@
       color: #055b61;
       text-align: center;
     }
+    
+
+.atividade-box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: 5%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.atividade-box.atividade-box-reverse {
+  margin-left: 5%!important;
+  margin-right: auto!important;
+}
+
+
+.atividade-texto-simples,
+.atividade-titulo-box {
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    padding: 28px 34px;
+    box-sizing: border-box;
+}
+
+.atividade-texto-simples {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    justify-content: flex-start;
+    background-color: #ffffffe8;
+}
+
+.atividade-titulo-box {
+    width: 20%;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    justify-content: center;
+    text-align: center;
+    font-family: 'Bebas Neue', Copperplate, fantasy;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #055b61;
+    flex: 0 0 28%;
+}
+
+.atividade-texto-simples p {
+    margin: 0;
+    font-size: 19px !important;
+    line-height: 1.5;
+    font-weight: 400 !important;
+    color: #222 !important;
+    text-transform: none !important;
+    text-align: left !important;
+    background: none !important;
+    -webkit-text-fill-color: #222 !important;
+    -webkit-background-clip: initial !important;
+}
+
+.atividade-titulo-box p {
+    margin: 0;
+    font-family: "Bebas Neue", Copperplate, fantasy !important;
+    font-size: clamp(42px, 4vw, 68px) !important;
+    line-height: 1;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+}
+
+
+
 
     
-  
- 
 @media (max-width: 1200px) {
   .sec-countdown{
     position: static;  
@@ -522,7 +597,7 @@
     font-size: 14px !important;
     pointer-events: none;
     padding-top: 0 !important;
-  }
+  } 
 }
   </style>
   <body>    
@@ -682,6 +757,45 @@
         <p data-i18n data-en="Activities" data-pt="Atividades">Activities</p>
       </a>
     </div>
+    <div class="atividade-box">
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en="Hands-on sessions, talks, and networking moments throughout the week."
+               data-pt="Sessões práticas, palestras e momentos de networking ao longo da semana.">
+                Hands-on sessions, talks, and networking moments throughout the week.
+            </p>
+        </div>
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Lectures" data-pt="Palestras">Lectures</p>
+        </div>
+    </div>
+
+    <div class="atividade-box atividade-box-reverse">
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Workshops" data-pt="Workshops">Workshops</p>
+        </div>
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en="Practical activities designed to explore tools, methods, and real applications."
+               data-pt="Atividades práticas pensadas para explorar ferramentas, métodos e aplicações reais.">
+                Practical activities designed to explore tools, methods, and real applications.
+            </p>
+        </div>
+    </div>
+
+    <div class="atividade-box">
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en="A space for direct contact with companies, projects, and professional opportunities."
+               data-pt="Um espaço de contacto direto com empresas, projetos e oportunidades profissionais.">
+                A space for direct contact with companies, projects, and professional opportunities.
+            </p>
+        </div>
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Career Fair" data-pt="Feira de Emprego">Career Fair</p>
+        </div>
+    </div>
+
     <div class="meet-the-team">
       <a href="meettheteam.html">
         <p data-i18n data-en="Meet the Team" data-pt="Equipa">MEET THE TEAM</p>
