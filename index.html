@@ -275,7 +275,7 @@
       font-size: 21px;
       font-weight: 700;
       font-family: "Bebas Neue", Copperplate, fantasy;
-        background: url("assets/images/Background.png") center/cover;
+      background: url("assets/images/Background.png") center/cover;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -364,14 +364,15 @@
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: auto;
-  margin-right: 5%;
+  margin-right: 2.5%;
   border-radius: 12px;
   overflow: hidden;
+  outline: solid 1px rgb(248, 8, 8);
 }
 
 
 .atividade-box.atividade-box-reverse {
-  margin-left: 5%!important;
+  margin-left: 2.5%!important;
   margin-right: auto!important;
 }
 
@@ -386,6 +387,7 @@
 }
 
 .atividade-texto-simples {
+    width: 80%;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
     justify-content: flex-start;
     background-color: #ffffffe8;
@@ -397,10 +399,7 @@
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
     justify-content: center;
     text-align: center;
-    font-family: 'Bebas Neue', Copperplate, fantasy;
-    font-size: 20px;
     line-height: 1.1;
-    color: #055b61;
     flex: 0 0 28%;
 }
 
@@ -426,8 +425,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase !important;
     text-align: center !important;
-    background: none !important;
-    -webkit-background-clip: initial !important;
+    background: url("assets/images/Background.png") center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 
@@ -492,14 +493,45 @@
     height: auto;
     pointer-events: none;
   }
+  .atividade-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 10%;
+  margin-right: auto;
+
+
+}
+.atividade-box.atividade-box-reverse {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto !important;
+  margin-right: 10%!important;
+}
+
+
+.atividade-texto-simples,
+.atividade-titulo-box {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 28px 34px;
+    box-sizing: border-box;
+}
+.atividade-titulo-box {
+    width: 100%;
+
+}
+.atividade-texto-simples p {
+    font-size: 18px !important;
+    
+}
  
 }
     
 @media (max-width: 768px) {
   /* Fix font on mobile */
-  body {
-    font-family: "Jaapokki Subtract", Copperplate, fantasy, sans-serif;
-  }
 
   .about-us-texto p,
   .atividades p,
@@ -598,6 +630,44 @@
     pointer-events: none;
     padding-top: 0 !important;
   } 
+  .atividade-box {
+  width: 80%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 10%;
+  margin-right: auto;
+  }
+  .atividade-box.atividade-box-reverse {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto !important;
+    margin-right: 10%!important;
+  }
+
+
+  .atividade-texto-simples,
+  .atividade-titulo-box {
+      width: 100%;
+      
+      display: flex;
+      align-items: center;
+      padding: 18px 34px;
+      box-sizing: border-box;
+  }
+  .atividade-titulo-box {
+      width: 100%;
+      font-size: 14px;
+    
+      
+      
+  }
+  .atividade-texto-simples p {
+      font-size: 14px !important;
+
+  }
+  .atividade-titulo-box p {
+    font-size: 30px !important; 
+  }
 }
   </style>
   <body>    
@@ -760,9 +830,9 @@
     <div class="atividade-box">
         <div class="atividade-texto-simples">
             <p data-i18n
-               data-en="Hands-on sessions, talks, and networking moments throughout the week."
-               data-pt="Sessões práticas, palestras e momentos de networking ao longo da semana.">
-                Hands-on sessions, talks, and networking moments throughout the week.
+               data-en="Inspiring lectures, expert insights, and thoughtful discussions."
+               data-pt="Palestras inspiradoras, perspetivas de especialistas e discussões enriquecedoras.">
+                Inspiring lectures, expert insights, and thoughtful discussions.
             </p>
         </div>
         <div class="atividade-titulo-box">
@@ -772,11 +842,11 @@
 
     <div class="atividade-box atividade-box-reverse">
         <div class="atividade-titulo-box">
-            <p data-i18n data-en="Workshops" data-pt="Workshops">Workshops</p>
+            <p data-i18n data-en="Pitches" data-pt="Pitches">Pitches</p>
         </div>
         <div class="atividade-texto-simples">
             <p data-i18n
-               data-en="Practical activities designed to explore tools, methods, and real applications."
+               data-en=""
                data-pt="Atividades práticas pensadas para explorar ferramentas, métodos e aplicações reais.">
                 Practical activities designed to explore tools, methods, and real applications.
             </p>
