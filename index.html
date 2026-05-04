@@ -34,7 +34,7 @@
     }
     
     .join-us {
-      width: 500px;
+      width: 100%;
       font-size: 115px;
       position: absolute;
       font-weight: bolder;
@@ -117,7 +117,7 @@
       top: 74px;
     }
     .join-us {
-      width: 500px;
+      width: 100%;
       font-size: 115px;
       position: absolute;
       font-weight: bolder;
@@ -275,7 +275,7 @@
       font-size: 21px;
       font-weight: 700;
       font-family: "Bebas Neue", Copperplate, fantasy;
-        background: url("assets/images/Background.png") center/cover;
+      background: url("assets/images/Background.png") center/cover;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -299,9 +299,142 @@
       top: 0;
       z-index: 1000;
     }
+
+    .team-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .team-carousel {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 8px 0 14px;
+      box-sizing: border-box;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .group-photo {
+      flex: 0 0 220px;
+      max-width: 220px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .group-photo img {
+      width: 100%;
+      height: 200px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .group-photo span {
+      display: block;
+      padding: 10px 10px 14px;
+      font-family: 'Bebas Neue', Copperplate, fantasy;
+      font-size: 20px;
+      line-height: 1.1;
+      color: #055b61;
+      text-align: center;
+    }
     
-  
- 
+
+.atividade-box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: 2.5%;
+  border-radius: 12px;
+  overflow: hidden;
+  outline: solid 1px rgb(248, 8, 8);
+}
+
+
+.atividade-box.atividade-box-reverse {
+  margin-left: 2.5%!important;
+  margin-right: auto!important;
+}
+
+
+.atividade-texto-simples,
+.atividade-titulo-box {
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    padding: 28px 34px;
+    box-sizing: border-box;
+}
+
+.atividade-texto-simples {
+    width: 80%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    justify-content: flex-start;
+    background-color: #ffffffe8;
+}
+
+.atividade-titulo-box {
+    width: 20%;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+    flex: 0 0 28%;
+}
+
+.atividade-texto-simples p {
+    margin: 0;
+    font-size: 19px !important;
+    line-height: 1.5;
+    font-weight: 400 !important;
+    color: #222 !important;
+    text-transform: none !important;
+    text-align: left !important;
+    background: none !important;
+    -webkit-text-fill-color: #222 !important;
+    -webkit-background-clip: initial !important;
+}
+
+.atividade-titulo-box p {
+    margin: 0;
+    font-family: "Bebas Neue", Copperplate, fantasy !important;
+    font-size: clamp(42px, 4vw, 68px) !important;
+    line-height: 1;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    background: url("assets/images/Background.png") center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+
+
+
+    
 @media (max-width: 1200px) {
   .sec-countdown{
     position: static;  
@@ -360,14 +493,45 @@
     height: auto;
     pointer-events: none;
   }
+  .atividade-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 10%;
+  margin-right: auto;
+
+
+}
+.atividade-box.atividade-box-reverse {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto !important;
+  margin-right: 10%!important;
+}
+
+
+.atividade-texto-simples,
+.atividade-titulo-box {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 28px 34px;
+    box-sizing: border-box;
+}
+.atividade-titulo-box {
+    width: 100%;
+
+}
+.atividade-texto-simples p {
+    font-size: 18px !important;
+    
+}
  
 }
     
 @media (max-width: 768px) {
   /* Fix font on mobile */
-  body {
-    font-family: "Jaapokki Subtract", Copperplate, fantasy, sans-serif;
-  }
 
   .about-us-texto p,
   .atividades p,
@@ -465,6 +629,44 @@
     font-size: 14px !important;
     pointer-events: none;
     padding-top: 0 !important;
+  } 
+  .atividade-box {
+  width: 80%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 10%;
+  margin-right: auto;
+  }
+  .atividade-box.atividade-box-reverse {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto !important;
+    margin-right: 10%!important;
+  }
+
+
+  .atividade-texto-simples,
+  .atividade-titulo-box {
+      width: 100%;
+      
+      display: flex;
+      align-items: center;
+      padding: 18px 34px;
+      box-sizing: border-box;
+  }
+  .atividade-titulo-box {
+      width: 100%;
+      font-size: 14px;
+    
+      
+      
+  }
+  .atividade-texto-simples p {
+      font-size: 14px !important;
+
+  }
+  .atividade-titulo-box p {
+    font-size: 30px !important; 
   }
 }
   </style>
@@ -473,7 +675,7 @@
     <div class="countdown-e-banner">
       <div class="sec-countdown">
         <div class="texto-countdown">
-          <p class="join-us" data-i18n data-en="Join Us In" data-pt="Junta-te a nós em" style="color: #055b61">Join Us In:</p>
+          <p class="join-us" data-i18n data-en="Join Us In" data-pt="Participa em" style="color: #055b61">Join Us In:</p>
         </div>
         <section class="countdown-section" id="countdown-to-event">
           <div class="countdown">
@@ -625,10 +827,97 @@
         <p data-i18n data-en="Activities" data-pt="Atividades">Activities</p>
       </a>
     </div>
+    <div class="atividade-box">
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en="Inspiring lectures, expert insights, and thoughtful discussions."
+               data-pt="Palestras inspiradoras, perspetivas de especialistas e discussões enriquecedoras.">
+                Inspiring lectures, expert insights, and thoughtful discussions.
+            </p>
+        </div>
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Lectures" data-pt="Palestras">Lectures</p>
+        </div>
+    </div>
+
+    <div class="atividade-box atividade-box-reverse">
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Pitches" data-pt="Pitches">Pitches</p>
+        </div>
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en=""
+               data-pt="Atividades práticas pensadas para explorar ferramentas, métodos e aplicações reais.">
+                Practical activities designed to explore tools, methods, and real applications.
+            </p>
+        </div>
+    </div>
+
+    <div class="atividade-box">
+        <div class="atividade-texto-simples">
+            <p data-i18n
+               data-en="A space for direct contact with companies, projects, and professional opportunities."
+               data-pt="Um espaço de contacto direto com empresas, projetos e oportunidades profissionais.">
+                A space for direct contact with companies, projects, and professional opportunities.
+            </p>
+        </div>
+        <div class="atividade-titulo-box">
+            <p data-i18n data-en="Career Fair" data-pt="Feira de Emprego">Career Fair</p>
+        </div>
+    </div>
+
     <div class="meet-the-team">
       <a href="meettheteam.html">
         <p data-i18n data-en="Meet the Team" data-pt="Equipa">MEET THE TEAM</p>
       </a>
+     </div>
+     <div class="team-carousel-wrapper">
+      
+      <div class="team-carousel" >
+        <div class="group-photo">
+          <img src="assets/images/coo_group.jpeg" alt="coordination group">
+          <span data-i18n data-en="General Coordination" data-pt="Coordenação Geral" >
+            General Coordination
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/com_group.jpeg" alt="communication group">
+          <span data-i18n data-en="Communication Department" data-pt="Departamento de Comunicação" >
+            Communication Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/re_group.jpeg" alt="relations group">
+          <span data-i18n data-en="External Relations Department" data-pt="Departamento de Relações Externas" >
+            External Relations Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/log_group.jpeg" alt="logistics group">
+          <span data-i18n data-en="Logistics Department" data-pt="Departamento de Logística" >
+            Logistics Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/inf_group.jpeg" alt="informatics group">
+          <span data-i18n data-en="Informatics Department" data-pt="Departamento de Informática" >
+            Informatics Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/des_group.jpeg" alt="design group">
+          <span data-i18n data-en="Design Department" data-pt="Departamento de Design" >
+            Design Department
+          </span>
+        </div>
+        <div class="group-photo">
+          <img src="assets/images/cie_group.jpeg" alt="science group">
+          <span data-i18n data-en="Science Department" data-pt="Departamento Ciêntifico" >
+            Science Department
+          </span>
+        </div>
+      </div>
+      
     </div>
     <div id="footer-container"></div>
 
