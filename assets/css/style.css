@@ -1,6 +1,11 @@
 /* Importação da fonte */
 @import url('https://fonts.googleapis.com/css?family=Jaapokki+Subtract&display=swap');
 
+/* Force light mode regardless of system preference */
+:root {
+    color-scheme: light;
+}
+
 /* CSS Reset */
 * {
     margin: 0;

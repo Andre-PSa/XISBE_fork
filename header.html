@@ -264,6 +264,12 @@
                 e.stopPropagation();
                 navContent.classList.toggle('active');
             });
+
+            document.addEventListener('click', (e) => {
+                if (!navContent.contains(e.target) && e.target !== newBtn) {
+                    navContent.classList.remove('active');
+                }
+            });
         }
 
         // Auth
