@@ -24,6 +24,7 @@ quando se abre um speaker card alguns deles não ficam com a linha de baixo perf
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="color-scheme" content="light" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title
       data-en="Opening and Closing Sessions"
@@ -3258,6 +3259,90 @@ PITCHES
           </div>
         </div>
       </div>
+
+      <h1 class="main-title">DEBATE</h1>
+
+      <div class="session-container" style="display: flex; justify-content: center; text-align: justify;">
+        <div class="session-content">
+          <h2>Debate</h2>
+          <p><strong>Monday, 14:00 - 15:30</strong></p>
+          <p>📍 <strong>V02.1</strong></p>
+          <p><strong>Speakers:</strong> Ana Lanham, Nídia Lourenço, Pedro Teixeira</p>
+        </div>
+      </div>
+
+      <div class="speaker-card">
+        <button aria-expanded="false" class="speaker-toggle" type="button">
+          <div class="speaker-image-wrapper">
+            <img alt="Ana Lanham" class="speaker-image" src="assets/images/anaLanham.jpg" />
+          </div>
+          <div class="speaker-mobile-bar">
+            <span class="speaker-mobile-name">Ana Lanham</span>
+            <span aria-hidden="true" class="speaker-mobile-icon">+</span>
+          </div>
+        </button>
+        <div class="speaker-body">
+          <div class="speaker-desktop-layout reverse">
+            <div class="speaker-image-wrapper desktop-only">
+              <img alt="Ana Lanham" class="speaker-image" src="assets/images/anaLanham.jpg" />
+            </div>
+            <div class="session-content">
+              <p><strong>Ana Lanham</strong></p>
+              <p>Ana Lanham is an Assistant Professor at IST/iBB and a former lecturer at the University of Bath (UK). She holds a PhD in Biochemical Engineering from Universidade Nova de Lisboa, specialising in biological nutrient removal systems for wastewater treatment. Her career includes a significant policy-support role as a scientific officer at the European Commission's Joint Research Centre (JRC), where she led an expert group on the verification of water technologies. An active member of the International Water Association (IWA), she has held multiple leadership roles in specialist groups focused on microbial ecology and water engineering.</p>
+              <p>Currently, her research group focuses on Microbial Sociology for the Circular Economy, using microbial ecology and environmental biotechnology tools to understand, design and improve biological processes for wastewater treatment and resource recovery. The group's expertise includes the study of bacterial and phage communities, bioreactor kinetics, and metabolic modeling, as well as technology assessment through LCA thinking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-card">
+        <button aria-expanded="false" class="speaker-toggle" type="button">
+          <div class="speaker-image-wrapper">
+            <img alt="Nídia Lourenço" class="speaker-image" src="assets/images/nidiaLourenco.jpeg" />
+          </div>
+          <div class="speaker-mobile-bar">
+            <span class="speaker-mobile-name">Nídia Lourenço</span>
+            <span aria-hidden="true" class="speaker-mobile-icon">+</span>
+          </div>
+        </button>
+        <div class="speaker-body">
+          <div class="speaker-desktop-layout">
+            <div class="speaker-image-wrapper desktop-only">
+              <img alt="Nídia Lourenço" class="speaker-image" src="assets/images/nidiaLourenco.jpeg" />
+            </div>
+            <div class="session-content">
+              <p><strong>Nídia Lourenço</strong></p>
+              <p>Nídia Dana Lourenço is an Assistant Professor at NOVA FCT and a Senior Researcher at UCIBIO. A Chemical Engineer with a PhD in Biotechnology from Instituto Superior Técnico (IST), her career includes experience in the pharmaceutical industry (AtralCipan) and a postdoctoral fellowship at iBB-IST, including a research stay at TU Delft.</p>
+              <p>With extensive pedagogical experience, she has held teaching positions at several institutions (UCP, IPS, UAlg, and IST), having received two Teaching Excellence Diplomas from IST. Her research expertise focuses on activated and aerobic granular sludge biotechnologies, as well as real-time bioprocess monitoring. Her current research is mainly focused on the development and optimization of bioprocesses for waste/wastewater treatment and valorization by mixed microbial cultures, from lab to pilot scale, including the biodegradation of micropollutants and the production of polyhydroxyalkanoate (PHA) biopolymers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-card">
+        <button aria-expanded="false" class="speaker-toggle" type="button">
+          <div class="speaker-image-wrapper">
+            <img alt="Pedro Teixeira" class="speaker-image" src="assets/images/pedroTeixeira.jpeg" />
+          </div>
+          <div class="speaker-mobile-bar">
+            <span class="speaker-mobile-name">Pedro Teixeira</span>
+            <span aria-hidden="true" class="speaker-mobile-icon">+</span>
+          </div>
+        </button>
+        <div class="speaker-body">
+          <div class="speaker-desktop-layout reverse">
+            <div class="speaker-image-wrapper desktop-only">
+              <img alt="Pedro Teixeira" class="speaker-image" src="assets/images/pedroTeixeira.jpeg" />
+            </div>
+            <div class="session-content">
+              <p><strong>Pedro Teixeira</strong></p>
+              <p>Pedro Teixeira holds a PhD in Microbiology from the Faculty of Sciences of the University of Lisbon, specializing in environmental microbiology with a particular focus on bioaugmentation as a tool for the bioremediation of anthropogenic pollution.</p>
+              <p>He currently serves as the Head of the Research and Development (R&amp;D) Department at BioTask, Biotecnologia Lda., a Portuguese biotechnology company based in Torres Vedras. His work involves studying new environmental biotech solutions, focusing on the development of sustainable technologies to address complex ecological challenges and meet the real-world demands of the Portuguese market. In this session, he aims to share his experience in converting scientific knowledge into market value within the environmental sector.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
     <div id="footer-placeholder"></div>
     <button
@@ -3412,40 +3497,48 @@ PITCHES
       }
 
       function wrapSpeakerRuns() {
-        const container = document.querySelector(".container");
-        if (!container) return;
+        const allCards = Array.from(document.querySelectorAll("main .speaker-card")).filter(
+          (card) => !card.closest(".speaker-collection")
+        );
 
-        const children = Array.from(container.children);
-        let run = [];
-
-        const flushRun = () => {
-          if (!run.length) return;
-
-          if (
-            run.length === 1 &&
-            run[0].parentElement.classList.contains("speaker-collection")
-          ) {
-            run = [];
-            return;
-          }
-
-          const collection = document.createElement("div");
-          collection.className = "speaker-collection";
-          run[0].before(collection);
-
-          run.forEach((card) => collection.appendChild(card));
-          run = [];
-        };
-
-        children.forEach((child) => {
-          if (child.classList && child.classList.contains("speaker-card")) {
-            run.push(child);
-          } else {
-            flushRun();
-          }
+        const parents = new Map();
+        allCards.forEach((card) => {
+          const p = card.parentElement;
+          if (!parents.has(p)) parents.set(p, Array.from(p.children));
         });
 
-        flushRun();
+        parents.forEach((children) => {
+          let run = [];
+
+          const flushRun = () => {
+            if (!run.length) return;
+
+            if (
+              run.length === 1 &&
+              run[0].parentElement.classList.contains("speaker-collection")
+            ) {
+              run = [];
+              return;
+            }
+
+            const collection = document.createElement("div");
+            collection.className = "speaker-collection";
+            run[0].before(collection);
+
+            run.forEach((card) => collection.appendChild(card));
+            run = [];
+          };
+
+          children.forEach((child) => {
+            if (child.classList && child.classList.contains("speaker-card")) {
+              run.push(child);
+            } else {
+              flushRun();
+            }
+          });
+
+          flushRun();
+        });
       }
 
       function buildSpeakerRows() {
