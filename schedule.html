@@ -256,7 +256,7 @@
             { startTime: '15:30', endTime: '16:00', ter: { activity: 'Coffee break (Hall 2)', activityPt: 'Pausa para Café (Hall 2)', color: '#FFEAA6', fontColor: '#111111' }, qua2: { activity: 'Coffee break (Hall 2)', activityPt: 'Pausa para Café (Hall 2)', color: '#FFEAA6', fontColor: '#111111' }, qui: { activity: 'Coffee break', activityPt: 'Pausa para Café', color: '#FFEAA6', fontColor: '#111111' }, sex: { activity: 'Coffee break', activityPt: 'Pausa para Café', color: '#FFEAA6', fontColor: '#111111' } },
             { startTime: '16:00', endTime: '17:30', ter: { activity: 'Decoding Aging: From Molecules to Longevity (V02.1)', activityPt: 'Descodificar o Envelhecimento: Das Moléculas à Longevidade (V02.1)', color: '#B98CF2', fontColor: '#111111' }, qua2: { activity: 'Alumni Sessions Bachelor and Master (V02.1)', activityPt: 'Sessões Alumni Licenciatura e Mestrado (V02.1)', color: '#9BE36B', fontColor: '#111111' }, qui: { activity: 'Digital Twins e Realidade Aumentada em cirurgia (workshop champalimaud) (V02.2)', activityEn: 'Digital Twins and Augmented Reality in Surgery (Champalimaud Workshop) (V02.2)', activityPt: 'Digital Twins e Realidade Aumentada em Cirurgia (workshop champalimaud) (V02.2)', color: '#A9D7E1', fontColor: '#111111' }, sex: { activity: 'EMG as a proxy to the brain:How to control a robotic prosthesis with EMG signals (V02.2)', activityPt: 'EMG como Proxy do Cérebro: Como Controlar uma Prótese Robótica com Sinais EMG (V02.2)', color: '#8FB2F3', fontColor: '#111111' } },
             { startTime: '17:30', endTime: '18:00', sex: { activity: 'Closing Session (Grande Anfiteatro)', activityPt: 'Sessão de Encerramento (Grande Anfiteatro)', color: '#F7B5A8', fontColor: '#111111' } },
-            { startTime: '17:30', endTime: '19:00', qui: { activity: 'Churrasco', color: '#5FAFB1', fontColor: '#111111' } }
+            { startTime: '19:00', endTime: '19:30', qui: { activity: 'Churrasco', timeLabel: '19h', color: '#5FAFB1', fontColor: '#111111' } }
         ];
 
         const eventColorPalette = ['#F6B756', '#F79A4A', '#F46D6D', '#8C73E6', '#6F7AE6', '#3BB3C3'];
@@ -328,12 +328,12 @@
                             card.innerHTML = `
                                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 10px;">
                                     <strong style="flex: 1; text-align: left;" data-i18n data-en="${displayEn}" data-pt="${displayPt}">${displayEn}</strong>
-                                    <small style="flex: 1; text-align: center;">${item.startTime} - ${item.endTime}</small>
+                                    <small style="flex: 1; text-align: center;">${act.timeLabel || `${item.startTime} - ${item.endTime}`}</small>
                                     <small style="flex: 1; text-align: right;">${act.room || ''}</small>
                                 </div>
                             `;
                         }
-                        else card.innerHTML = `<strong data-i18n data-en="${displayEn}" data-pt="${displayPt}">${displayEn}</strong><small>${item.startTime} - ${item.endTime}</small><small>${act.room || ''}</small>`;
+                        else card.innerHTML = `<strong data-i18n data-en="${displayEn}" data-pt="${displayPt}">${displayEn}</strong><small>${act.timeLabel || `${item.startTime} - ${item.endTime}`}</small><small>${act.room || ''}</small>`;
 
                         if (isInteractive) {
                             card.onclick = (e) => {
