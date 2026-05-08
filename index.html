@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="assets/css/website.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
-    
+
 </head>
-  
+
   <style>
     body {
       height: 100%;
@@ -33,11 +33,11 @@
       background-color: white;
       top: 100px;
     }
-    
+
     .join-us {
       width: 100%;
       font-size: 115px;
-      position: absolute;
+      position: static;
       font-weight: bolder;
       font-family: "Bebas Neue", Copperplate, fantasy;
       text-transform: uppercase;
@@ -46,8 +46,10 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       text-align: center;
+      margin: 0;
+      padding: 20px 0;
     }
-    
+
     .join-us span {
       display: block;
     }
@@ -87,7 +89,7 @@
       font-family: "Bebas Neue", Copperplate, fantasy;
       text-transform: uppercase;
     }
-    
+
     .countdown-1,
     .countdown-2,
     .countdown-3,
@@ -95,7 +97,7 @@
       justify-content: center;
       align-items: center;
     }
-    
+
     .countdown span {
       font-size: 2rem;
       font-weight: bold;
@@ -117,23 +119,10 @@
       background-color: white;
       top: 74px;
     }
-    .join-us {
-      width: 100%;
-      font-size: 115px;
-      position: absolute;
-      font-weight: bolder;
-      font-family: "Bebas Neue", Copperplate, fantasy;
-      text-transform: uppercase;
-      background: url("assets/images/Background.png") 50% 50%;
-      background-size: cover;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      text-align: center;
-    }
     .join-us span {
       display: block;
     }
-    
+
     .about-us-main {
       height: auto;
       display: flex;
@@ -160,7 +149,7 @@
       -webkit-text-fill-color: transparent;
       margin: 0;
     }
-    
+
     .x-sbe-caixa {
       height: auto;
     }
@@ -179,7 +168,7 @@
       margin: 10px 0;
       line-height: 25px;
     }
-    
+
     .logo-e-texto-about-us {
       background-color: white;
       display: flex;
@@ -190,7 +179,7 @@
       height: 80%;
 
     }
-   
+
     .logo-about-us {
       display: flex;
       flex: 1;
@@ -211,7 +200,7 @@
       align-items: center;
       padding-top: 18px;
     }
- 
+
     .sec-about-us div {
       width: 70%;
     }
@@ -248,7 +237,7 @@
     .pergunta-what-texto p {
       margin: 10px;
     }
-    
+
     .pergunta-where-main {
       display: flex;
       justify-content: center;
@@ -281,14 +270,14 @@
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
-  
+
 
     .atividades a,
     .meet-the-team a {
       text-decoration: none;
     }
-    
-    
+
+
     #header-container,
     #footer-container {
       width: 100%;
@@ -356,7 +345,7 @@
       color: #055b61;
       text-align: center;
     }
-    
+
 
 .atividade-box {
   display: flex;
@@ -435,45 +424,45 @@
 
 
 
-    
+
 @media (max-width: 1200px) {
   .sec-countdown{
-    position: static;  
+    position: static;
     top: auto;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0; 
+    gap: 0;
   }
   .join-us {
-    position: static; 
+    position: static;
     font-size: 20vw;
     margin-bottom: 0;
     width: 100% !important;
-    margin-top: 15px;
+    margin-top: 30px;
   }
   .countdown {
     flex-direction: row !important;
   }
   .countdown div span{
-    font-size: 18vw;                 
+    font-size: 18vw;
     line-height: 1;
   }
   .countdown div p{
-    font-size: 6vw;                 
-    margin: 0;                       
+    font-size: 6vw;
+    margin: 0;
   }
   .about-us{
     height: auto !important;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
     padding: 15px 0 !important;
   }
 
   .logo-e-texto-about-us{
   display: flex;
-  align-items: flex-start; 
-  height: auto;            
-  pointer-events: none;  
+  align-items: flex-start;
+  height: auto;
+  pointer-events: none;
   }
   .sec-about-us,
   .pergunta-who-texto,
@@ -486,9 +475,9 @@
   .pergunta-what-texto {
     width: 65% !important;
     height: auto !important;
-    pointer-events: none; 
+    pointer-events: none;
   }
- 
+
   .pergunta-where-texto{
     width: 80%;
     height: auto;
@@ -526,11 +515,11 @@
 }
 .atividade-texto-simples p {
     font-size: 18px !important;
-    
+
 }
- 
+
 }
-    
+
 @media (max-width: 768px) {
   /* Fix font on mobile */
 
@@ -541,26 +530,26 @@
   }
 
   .sec-countdown{
-    position: static;  
+    position: static;
     top: auto;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0; 
+    gap: 0;
   }
   .join-us {
-    position: static; 
+    position: static;
     margin-bottom: 0;
     width: 100% !important;
   }
   .countdown {
     flex-direction: row !important;
   }
-  .countdown div span{              
+  .countdown div span{
     line-height: 1;
   }
-  .countdown div p{                 
-    margin: 0;                       
+  .countdown div p{
+    margin: 0;
   }
 
   /* Logo above text */
@@ -596,344 +585,39 @@
   .sec-about-us div {
     width: 85%;
   }
-
-  /* Who / What stacked vertically */
-  .perguntas-who-what {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 15px;
-    padding: 15px 0;
-  }
-  .pergunta-who,
-  .pergunta-what {
-    width: 100%;
-    flex: unset;
-    justify-content: center;
-  }
-  .pergunta-who-texto,
-  .pergunta-what-texto {
-    width: 80% !important;
-    height: auto !important;
-    pointer-events: none;
-    font-size: 14px !important;
-    padding-top: 0 !important;
-  }
-
-  /* Where */
-  .pergunta-where-main {
-    height: auto;
-    padding: 0 0 15px 0;
-  }
-  .pergunta-where-texto {
-    width: 80% !important;
-    height: auto !important;
-    font-size: 14px !important;
-    pointer-events: none;
-    padding-top: 0 !important;
-  } 
-  .atividade-box {
-  width: 80%;
-  display: flex;
-  flex-direction: column-reverse;
-  margin-left: 10%;
-  margin-right: auto;
-  }
-  .atividade-box.atividade-box-reverse {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto !important;
-    margin-right: 10%!important;
-  }
-
-
-  .atividade-texto-simples,
-  .atividade-titulo-box {
-      width: 100%;
-      
-      display: flex;
-      align-items: center;
-      padding: 18px 34px;
-      box-sizing: border-box;
-  }
-  .atividade-titulo-box {
-      width: 100%;
-      font-size: 14px;
-    
-      
-      
-  }
-  .atividade-texto-simples p {
-      font-size: 14px !important;
-
-  }
-  .atividade-titulo-box p {
-    font-size: 30px !important; 
-  }
 }
   </style>
-  <body>    
+  <body>
     <div id="header-container"></div>
     <div class="countdown-e-banner">
       <div class="sec-countdown">
         <div class="texto-countdown">
-          <p class="join-us" data-i18n data-en="Barbeque is in:" data-pt="Churrasco em:" style="color: #055b61">Join Us In:</p>
+          <p class="join-us" data-i18n data-en="See you next year!" data-pt="Até para o ano!" style="color: #055b61">See you next year!</p>
         </div>
-        <section class="countdown-section" id="countdown-to-event">
-          <div class="countdown">
-            <div class="countdown-1">
-              <span id="days">0</span>
-              <p data-i18n data-en="Days" data-pt="Dias">Days</p>
-            </div>
-            <div class="countdown-2">
-              <span id="hours">0</span>
-              <p data-i18n data-en="Hours" data-pt="Horas">Hours</p>
-            </div>
-            <div class="countdown-3">
-              <span id="minutes">0</span>
-              <p data-i18n data-en="Minutes" data-pt="Minutos">Minutes</p>
-            </div>
-            <div class="countdown-4">
-              <span id="seconds">0</span>
-              <p data-i18n data-en="Seconds" data-pt="Segundos">Seconds</p>
-            </div>
-          </div>
-        </section>
       </div>
       <div class="banner-container" style="width: 100%; overflow: hidden;">
         <picture>
           <source media="(max-width: 768px)" srcset="assets/images/Banner_mobile.png" type="image/png">
-          <img src="assets/images/Banner_desktop.png" 
-            alt="SBE Banner" 
+          <img src="assets/images/Banner_desktop.png"
+            alt="SBE Banner"
             style="width: 100%; height: auto; display: block; object-fit: cover;">
     </picture>
   </div>
 </div>
-    <div class="about-us-main">
-      <div class="about-us-texto">
-        <p data-i18n data-en="About Us" data-pt="Sobre Nós">About Us</p>
-      </div>
-      <div class="x-sbe-caixa">
-        <div class="about-us">
-          <div class="logo-e-texto-about-us">
-            <div class="logo-about-us">
-              <img
-                class="imagem-logo-about-us"
-                src="assets/images/Logo_cores.png"
-                alt="SBE Semana da Bioengenharia"
-                style="width: 80%; height: 80%; object-fit: contain;"
-              />
-            </div>
-            <div class="sec-about-us">
-              <div>
-                <p class="texto-about-us">
-                  <span><strong>SBE</strong></span> –
-                  <span><strong>Semana da Bioengenharia</strong></span> - 
-                  <span data-i18n data-en="is a week-long event dedicated to showcasing 
-                  the exciting world of Bioengineering. It combines biology, biomechanics,
-                  artificial intelligence, pharmaceuticals and technologies, and innovation 
-                  to address real-world challenges." 
-                  data-pt= "é um evento de uma semana dedicado a mostrar o fascinante 
-                  mundo da Bioengenharia. Combina biologia, biomecânica, inteligência 
-                  artificial, farmacêutica e tecnologias, e inovação para responder a 
-                  desafios do mundo real." >
-                  is a week-long event dedicated to showcasing the exciting world of
-                  Bioengineering. It combines biology, biomechanics, artificial
-                  intelligence, pharmaceuticals and technologies, and innovation
-                  to address real-world challenges.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="perguntas-who-what">
-        <div class="pergunta-who">
-          <div class="pergunta-who-texto">
-            <p class="perguntas-about-us">
-               <span data-i18n data-en=" " data-pt="Para"></span>
-               <span style="font-size: 45px" data-i18n data-en="WHO" data-pt="QUEM">WHO</span>
-               <span data-i18n data-en=" is it for?" data-pt=" é?"> is it for?</span>
-            </p>
-            <p style="line-height: 25px">
-               <span data-i18n data-en="SBE is designed for " data-pt="A SBE foi pensada para ">
-               SBE is designed for 
-               </span>
-
-               <span class="aaa">
-                  <strong
-                    data-i18n
-                    data-en="students, researchers, and enthusiasts of Bioengineering"
-                    data-pt="estudantes, investigadores e entusiastas da Bioengenharia">
-                    students, researchers, and enthusiasts of Bioengineering
-                  </strong>
-               </span>
-
-               <span
-                data-i18n
-                data-en=". Whether you're curious about groundbreaking discoveries, eager to network, or simply exploring your passion for the field, this event has something for everyone."
-                data-pt=". Quer tenhas curiosidade sobre descobertas inovadoras, vontade de fazer networking, ou estejas simplesmente a explorar a tua paixão pela área, este evento tem algo para todos.">
-                . Whether you're curious about groundbreaking discoveries, eager to network, or simply exploring your passion for the field, this event has something for everyone.
-               </span>
-            </p>
-          </div>
-        </div>
-        <div class="pergunta-what">
-          <div class="pergunta-what-texto">
-            <p class="perguntas-about-us">
-              <span style="font-size: 45px" data-i18n data-en="WHAT" data-pt="O QUE">WHAT</span> 
-              <span data-i18n data-en="can you expect?" data-pt="esperar?">can you expect?</span> 
-              
-            </p>
-            <p>
-              -
-              <span><strong data-i18n data-en="Inspiring talks" data-pt="Palestras inspiradoras">
-              Inspiring talks</strong></span>
-              <span data-i18n data-en=" by leading experts" data-pt=" por especialistas"> by leading experts</span>
-            </p>
-            <p>
-              - 
-              <span><strong data-i18n data-en="Hands-on workshops" data-pt="Workshops práticos ">Hands-on workshops</strong></span> 
-              <span data-i18n data-en="to build practical skills" data-pt="para desenvolver competências práticas">to build practical skills</span>
-            </p>
-            <p>
-              - 
-              <span data-i18n data-en="Opportunities to " data-pt="Oportunidades para fazer ">Opportunities to </span>
-              <span><strong>network</strong></span> 
-              <span data-i18n data-en="with professionals" data-pt="com profissionais">with professionals</span>
-            </p>
-            <p>
-              - <span><strong data-i18n data-en="Insights" data-pt="Perspetivas"> Insights</strong></span> 
-              <span data-i18n data-en="into career paths and the future of Bioengineering." data-pt="sobre carreiras e o futuro da Bioengenharia.">
-              into career paths and the future of Bioengineering.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="pergunta-where-main">
-        <div class="pergunta-where-texto">
-          <p class="perguntas-about-us">
-            <span class="where1" style="font-size: 45px" data-i18n data-en="WHERE" data-pt="ONDE">WHERE</span> 
-            <span data-i18n data-en="does it  happen?" data-pt="acontece?">does it happen?</span>
-          </p>
-          <p class="texto-perguntas-about-us">
-            <span><strong>Instituto Superior Técnico</strong></span>
-            (IST), 
-            <span data-i18n data-en="Lisbon" data-pt="Lisboa">Lisbon</span>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="atividades">
-      <a href="activities.html">
-        <p data-i18n data-en="Activities" data-pt="Atividades">Activities</p>
-      </a>
-    </div>
-    <div class="atividade-box">
-        <div class="atividade-texto-simples">
-            <p data-i18n
-               data-en="Inspiring lectures, expert insights, and thoughtful discussions."
-               data-pt="Palestras inspiradoras, perspetivas de especialistas e discussões enriquecedoras.">
-                Inspiring lectures, expert insights, and thoughtful discussions.
-            </p>
-        </div>
-        <div class="atividade-titulo-box">
-            <p data-i18n data-en="Lectures" data-pt="Palestras">Lectures</p>
-        </div>
-    </div>
-
-    <div class="atividade-box atividade-box-reverse">
-        <div class="atividade-titulo-box">
-            <p data-i18n data-en="Pitches" data-pt="Pitches">Pitches</p>
-        </div>
-        <div class="atividade-texto-simples">
-            <p data-i18n
-               data-en=""
-               data-pt="Atividades práticas pensadas para explorar ferramentas, métodos e aplicações reais.">
-                Practical activities designed to explore tools, methods, and real applications.
-            </p>
-        </div>
-    </div>
-
-    <div class="atividade-box">
-        <div class="atividade-texto-simples">
-            <p data-i18n
-               data-en="A space for direct contact with companies, projects, and professional opportunities."
-               data-pt="Um espaço de contacto direto com empresas, projetos e oportunidades profissionais.">
-                A space for direct contact with companies, projects, and professional opportunities.
-            </p>
-        </div>
-        <div class="atividade-titulo-box">
-            <p data-i18n data-en="Career Fair" data-pt="Feira de Emprego">Career Fair</p>
-        </div>
-    </div>
-
-    <div class="meet-the-team">
-      <a href="meettheteam.html">
-        <p data-i18n data-en="Meet the Team" data-pt="Equipa">MEET THE TEAM</p>
-      </a>
-     </div>
-     <div class="team-carousel-wrapper">
-      
-      <div class="team-carousel" >
-        <div class="group-photo">
-          <img src="assets/images/coo_group.jpeg" alt="coordination group">
-          <span data-i18n data-en="General Coordination" data-pt="Coordenação Geral" >
-            General Coordination
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/com_group.jpeg" alt="communication group">
-          <span data-i18n data-en="Communication Department" data-pt="Departamento de Comunicação" >
-            Communication Department
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/re_group.jpeg" alt="relations group">
-          <span data-i18n data-en="External Relations Department" data-pt="Departamento de Relações Externas" >
-            External Relations Department
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/log_group.jpeg" alt="logistics group">
-          <span data-i18n data-en="Logistics Department" data-pt="Departamento de Logística" >
-            Logistics Department
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/inf_group.jpeg" alt="informatics group">
-          <span data-i18n data-en="Informatics Department" data-pt="Departamento de Informática" >
-            Informatics Department
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/des_group.jpeg" alt="design group">
-          <span data-i18n data-en="Design Department" data-pt="Departamento de Design" >
-            Design Department
-          </span>
-        </div>
-        <div class="group-photo">
-          <img src="assets/images/cie_group.jpeg" alt="science group">
-          <span data-i18n data-en="Science Department" data-pt="Departamento Ciêntifico" >
-            Science Department
-          </span>
-        </div>
-      </div>
-      
-    </div>
     <div id="footer-container"></div>
 
-    <script>      
-      fetch("header.html")        
+    <script>
+      fetch("header.html")
         .then((response) => response.text())
         .then((data) => {
-          
+
           const container = document.getElementById("header-container");
-    
+
           // Limpa o que lá estiver antes
-          container.innerHTML = ""; 
+          container.innerHTML = "";
           // Cria um "fragmento" que processa o HTML e EXECUTA os scripts
           const fragment = document.createRange().createContextualFragment(data);
-          
+
           // Insere o fragmento no container
           container.appendChild(fragment);
 
@@ -943,46 +627,14 @@
             applyLanguage(savedLanguage);
           }
         })
-      
-      
+
+
       fetch("footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer-container").innerHTML = data;
         })
-        .catch((error) => console.error("Error loading header:", error));
-      
-      
-      function updateCountdown() {
-        
-        const eventDate = new Date("May 6, 2026 19:00:00").getTime();
-        
-        const now = new Date().getTime();
-        const timeLeft = eventDate - now;
-        
-        if (timeLeft <= 0) {
-        document.getElementById("days").textContent = 0;
-        document.getElementById("hours").textContent = 0;
-        document.getElementById("minutes").textContent = 0;
-        document.getElementById("seconds").textContent = 0;
-        return;
-        }
-        
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-        
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-      }
-      
-      setInterval(updateCountdown, 1000);
-      
+        .catch((error) => console.error("Error loading footer:", error));
     </script>
   </body>
 </html>
